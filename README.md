@@ -1,76 +1,87 @@
-# DAV_assignment_1
+Here’s your updated and enhanced **README.md** file with more depth and a clean structure:
 
-📘 Dataset Information – IMDb Movie Dataset
+---
 
-This dataset contains detailed information about movies and shows listed on IMDb.
+# 📊 Sales Data Analysis Project
 
-🔹 Columns:
+This project performs comprehensive **Exploratory Data Analysis (EDA)** on a sales dataset using Python. The analysis includes data cleaning, transformation, statistical operations, advanced grouping, pivot tables, and insightful visualizations using libraries such as **Pandas**, **NumPy**, **Matplotlib**, and **Seaborn**.
 
-id → Unique identifier for each movie/show
+---
 
-title → Name of the movie or show
+## 📁 Files Included
 
-genre → Genre category (e.g., Drama, Action, Comedy)
+| File Name                      | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `sales_data_sample.csv`       | Raw sales dataset (source: Kaggle)              |
+| `Sales_Data_Analysis.ipynb`   | Jupyter Notebook with full code and comments    |
+| `Sales_Data_Analysis_Report.pdf` | Clean report with graphs and insights (PDF)  |
 
-rating → IMDb rating (e.g., 8.2)
+---
 
-year → Year of release
+## 🧰 Tools & Libraries
 
-votes → Number of user votes
+- Python 3.x  
+- NumPy  
+- Pandas  
+- Matplotlib  
+- Seaborn  
+- Jupyter Notebook
 
-duration → Runtime in minutes
+---
 
-certificate → Age rating (e.g., PG-13, R, U)
+## 📌 Features
 
-description → Short summary or plot of the movie/show
+### ✅ Data Loading & Cleaning
+- Dropped missing/null values
+- Converted string dates into `datetime` objects
+- Handled duplicates and formatted categorical columns
 
-director → Name(s) of the director(s)
+### ✅ Exploratory Data Analysis
+- Descriptive statistics (mean, median, std, etc.)
+- Group-wise analysis using `groupby()`
+- Multi-index pivot tables for business insights
+- Correlation analysis
 
-stars → Main actors/actresses
+### ✅ Visualizations
+- Histogram of Sales Distribution
+- Barplot: Deal Size vs Total Sales
+- Scatterplot: Quantity Ordered vs Price Each (hue by Deal Size)
+- Boxplot: Sales across Quarters
+- Heatmap of feature correlations
+- Line plot of cumulative revenue by month
 
-📌 Source: IMDb Movie Dataset (Kaggle or IMDb official sources)
+### ✅ Bonus Operations
+- Derived new columns like `PROFIT`, `REVENUE`, etc.
+- Z-score normalization for selected numerical columns
+- Boolean indexing and conditional filtering
+- Rolling mean of monthly sales
+- Identifying top customers and top-performing product lines
 
--------------------------------------------------------------------------------------------
+---
 
-IMDb Movie Dataset Analysis
-Overview
-This project is based on analyzing an IMDb movie dataset using Python. The goal is to explore patterns in movie ratings, durations, genres, and certifications using basic data analysis techniques.
+## 📈 Key Findings
 
-Tools & Libraries Used
+- 💰 **Mid-size deals** generate the most revenue overall.
+- 📦 Higher order quantities often correspond with **discounted unit prices**.
+- 📊 Seasonal trends suggest **Q4 has the highest sales**.
+- 🏆 Certain product lines (e.g., **Classic Cars**, **Motorcycles**) significantly outperform others in profit and volume.
+- 🌍 Sales vary notably by **territory and country**, useful for regional marketing strategies.
 
-Python: Main language used
+---
 
-Pandas: For loading, cleaning, grouping, and pivoting data
+## 🔍 Dataset Source
 
-Google Colab: Platform used to write and run the code
+**Kaggle Dataset:** [Sales Data Sample](https://www.kaggle.com/datasets)
 
- Steps Performed
+---
 
-Data Cleaning & Preparation
+## 💡 How to Run
 
-Loaded IMDb data using pandas
+1. Clone the repository or download the ZIP.
+2. Open `Sales_Data_Analysis.ipynb` in **Jupyter Notebook**, **Google Colab**, or **VS Code**.
+3. Install required libraries using pip if needed:
+   ```bash
+   pip install pandas numpy matplotlib seaborn
+   ```
+4. Run each cell step-by-step and explore the outputs.
 
-Dropped missing values using dropna()
-
-Converted columns like "certificate" and "genre" to category type for easier analysis
-
-GroupBy Operations
-
-Counted number of movies per genre, certificate, and year
-
-Found average ratings and durations grouped by certificate and genre
-
-Found which genre and certificate had the highest-rated movie
-
-Used idxmax to get top movies in different categories
-
-Pivot Tables
-
-Created pivot tables to find average rating and duration per certificate and genre
-
-Performed multiple aggregation functions (min, max, mean) on ratings and durations
-
-Counted number of movies per genre and certificate using pivot tables
-
-📌 Conclusion
-This project used pandas GroupBy and pivot_table to explore how movies differ based on genre, certificate, and other attributes. It helped identify patterns such as which genres or certificates have longer or higher-rated movies.
